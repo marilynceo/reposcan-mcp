@@ -1,0 +1,34 @@
+# Smithery.ai Deployment Manifest for reposcan-mcp
+name: reposcan-mcp
+version: 1.0.0
+description: GitHub repository scanner for AI agents u2014 analyze structure, code
+  quality, contributors, dependencies, and detect secrets.
+gateway: https://reposcan.zhc-mcp.org
+runtime:
+  language: python
+  entrypoint: src/server.py
+  transport: stdio
+vendor: Zero Human Company
+tags:
+- mcp
+- mcp-server
+- ai-agent
+- zero-human-company
+pricing:
+  type: prepaid
+  trial: 50 free calls
+  packages:
+  - name: 500 Credits
+    price: 5.0
+    currency: EUR
+    credits: 500
+  - name: 5.000 Credits
+    price: 9.0
+    currency: EUR
+    credits: 5000
+  - name: 25.000 Credits
+    price: 19.0
+    currency: EUR
+    credits: 25000
+privacy: No data stored on servers. All inputs processed in-memory. See PRIVACY.md.
+tools: []
